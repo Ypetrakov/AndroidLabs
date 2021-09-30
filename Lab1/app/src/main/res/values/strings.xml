@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Lab1</string>
+    <string name="train_message">Your Train from %1$s to %2$s at %3$s.</string>
+    <string name="train_wrong_message">Enter the right data.</string>
+    <string name="submit">Submit</string>
+
+    <string-array name="cities_array">
+        <item>Kiev</item>   
+        <item>Kovel</item>
+        <item>Jitomir</item>
+        <item>Lviv</item>
+        <item>Lutsk</item>
+        <item>Korosten</item>
+    </string-array>
+
+    <string name="time1">12:00</string>
+    <string name="time2">15:00</string>
+    <string name="time3">18:00</string>
+    <string name="from">From</string>
+    <string name="trainImage">TrainImage</string>
+
+
+</resources>
