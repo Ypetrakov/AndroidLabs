@@ -1,4 +1,4 @@
-package com.example.lab3
+package com.example.lab2
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import androidx.fragment.app.Fragment
-import com.example.lab2.R
 
 
 class InputFragment : Fragment() {
@@ -39,7 +38,7 @@ class InputFragment : Fragment() {
         lateinit var cityTo: String
         lateinit var time: String
         val submitButton: Button = view.findViewById(R.id.button)
-        val tr = childFragmentManager.beginTransaction()
+
         submitButton.setOnClickListener{
             cityFrom = textView1.text.toString()
             cityTo = textView2.text.toString()
@@ -49,12 +48,10 @@ class InputFragment : Fragment() {
 
             val fragment = OutputFragment()
             fragment.arguments = args
-            val db = DataBaseHelper(view.context)
 
             if (cityFrom in cities && cityTo in cities && radio.checkedRadioButtonId != -1) {
                 time = view.findViewById<RadioButton>(radio.checkedRadioButtonId).text.toString()
                 args.putString("text", getString(R.string.train_message, cityFrom, cityTo, time))
-                db.addRow(cityFrom, cityTo, time)
 
                 val text = "Data added to DataBase"
                 Toast.makeText(view.context, text, duration).show()
@@ -75,11 +72,7 @@ class InputFragment : Fragment() {
 
 
             }
-        val openDataBaseButton: Button = view.findViewById(R.id.openButton)
-        openDataBaseButton.setOnClickListener{
-            val myIntent = Intent(activity, DataActivity::class.java)
-            startActivity(myIntent)
-        }
+
         }
 
 
