@@ -5,7 +5,7 @@
     <string name="submit">Submit</string>
 
     <string-array name="cities_array">
-        <item>Kiev</item>   
+        <item>Kiev</item>
         <item>Kovel</item>
         <item>Jitomir</item>
         <item>Lviv</item>
